@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cfsmfi16xmd3v"]
+
+[ext_resource type="Script" uid="uid://cce6cho13krww" path="res://admintest/admin_panel.gd" id="1_yyrbd"]
+
+[node name="AdminPanel" type="CanvasLayer" unique_id=1399776449]
+script = ExtResource("1_yyrbd")
+
+[node name="ToggleButton" type="Button" parent="." unique_id=353614181]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 90.0
+offset_bottom = 42.0
+text = "Admin"
+
+[node name="MainFrame" type="Panel" parent="." unique_id=636417441]
+offset_left = 160.0
+offset_top = 100.0
+offset_right = 760.0
+offset_bottom = 500.0
+
+[node name="PlayerListFrame" type="ScrollContainer" parent="MainFrame" unique_id=256945176]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 185.0
+offset_bottom = 395.0
+
+[node name="ScrollContainer" type="VBoxContainer" parent="MainFrame/PlayerListFrame" unique_id=572123452]
+layout_mode = 2
+
+[node name="ItemPanel" type="Panel" parent="MainFrame" unique_id=727309047]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 5.0
+offset_right = 595.0
+offset_bottom = 395.0
+
+[node name="HintLabel" type="Label" parent="MainFrame/ItemPanel" unique_id=329168446]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 200.0
+offset_right = 395.0
+offset_bottom = 240.0
+text = "<- Select a player first"
+
+[node name="SelectedLabel" type="Label" parent="MainFrame/ItemPanel" unique_id=2033666656]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 395.0
+offset_bottom = 42.0
+text = "No player selected"
+
+[node name="ItemList" type="VBoxContainer" parent="MainFrame/ItemPanel" unique_id=681582767]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 80.0
+offset_right = 395.0
+offset_bottom = 380.0
