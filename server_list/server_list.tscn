@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bq3ui2hk1i8a8"]
+
+[node name="ServerList" type="Control" unique_id=1534410665]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="." unique_id=1517378987]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleLabel" type="Label" parent="Background" unique_id=1829997301]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ServerScroll" type="ScrollContainer" parent="Background" unique_id=881062745]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 80.0
+offset_right = 1050.0
+offset_bottom = 530.0
+
+[node name="ServerContainer" type="VBoxContainer" parent="Background/ServerScroll" unique_id=1228715798]
+layout_mode = 2
+
+[node name="BottomButtons" type="HBoxContainer" parent="Background" unique_id=1682392347]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 560.0
+offset_right = 900.0
+offset_bottom = 610.0
+
+[node name="HostButton" type="Button" parent="Background/BottomButtons" unique_id=1919835760]
+layout_mode = 2
+
+[node name="JoinButton" type="Button" parent="Background/BottomButtons" unique_id=302978762]
+layout_mode = 2

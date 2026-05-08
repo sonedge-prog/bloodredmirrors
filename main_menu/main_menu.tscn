@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://f6isl70h8q5k"]
+
+[node name="MainMenu" type="Control" unique_id=675424561]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="." unique_id=1260674856]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonList" type="VBoxContainer" parent="." unique_id=889155188]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 350.0
+offset_right = 701.0
+offset_bottom = 600.0
+theme_override_constants/separation = 10
+
+[node name="PlayButton" type="Button" parent="ButtonList" unique_id=1969811414]
+layout_mode = 2
+text = "PLAY"
+
+[node name="ServerListButton" type="Button" parent="ButtonList" unique_id=492289878]
+layout_mode = 2
+text = "SERVER LIST"
+
+[node name="TutorialsButton" type="Button" parent="ButtonList" unique_id=182215531]
+layout_mode = 2
+text = "TUTORIALS"
+
+[node name="InformationButton" type="Button" parent="ButtonList" unique_id=1524434358]
+layout_mode = 2
+text = "INFORMATION"
+
+[node name="SettingsButton" type="Button" parent="ButtonList" unique_id=1424049308]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="ExitButton" type="Button" parent="ButtonList" unique_id=1579122681]
+layout_mode = 2
+text = "EXIT GAME"
+
+[node name="TutorialsPanel" type="Panel" parent="." unique_id=1619591936]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 50.0
+offset_right = 1050.0
+offset_bottom = 600.0
+
+[node name="TitleLanel" type="Label" parent="TutorialsPanel" unique_id=2040452523]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 940.0
+offset_bottom = 60.0
+
+[node name="ContentText" type="RichTextLabel" parent="TutorialsPanel" unique_id=1574397371]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 70.0
+offset_right = 940.0
+offset_bottom = 490.0
+
+[node name="BackButton" type="Button" parent="TutorialsPanel" unique_id=1328425193]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 500.0
+offset_right = 160.0
+offset_bottom = 540.0
+text = "<- Back"
+
+[node name="InformationPanel" type="Panel" parent="." unique_id=391005084]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 50.0
+offset_right = 1050.0
+offset_bottom = 600.0
+
+[node name="TitleLanel" type="Label" parent="InformationPanel" unique_id=128567486]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 940.0
+offset_bottom = 60.0
+
+[node name="ContentText" type="RichTextLabel" parent="InformationPanel" unique_id=715718354]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 70.0
+offset_right = 940.0
+offset_bottom = 490.0
+
+[node name="BackButton" type="Button" parent="InformationPanel" unique_id=1000834908]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 500.0
+offset_right = 160.0
+offset_bottom = 540.0
+text = "<- Back"

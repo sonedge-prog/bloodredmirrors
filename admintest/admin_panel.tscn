@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cfsmfi16xmd3v"]
 
-[ext_resource type="Script" uid="uid://cce6cho13krww" path="res://admintest/admin_panel.gd" id="1_yyrbd"]
+[ext_resource type="Script" uid="uid://cce6cho13krww" path="res://scenes/admintest/admin_panel.gd" id="1_yyrbd"]
 
 [node name="AdminPanel" type="CanvasLayer" unique_id=1399776449]
 script = ExtResource("1_yyrbd")

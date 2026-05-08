@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://f0x71thakc6b"]
+
+[sub_resource type="GDScript" id="GDScript_ul522"]
+script/source = "extends Control
+"
+
+[node name="IntroScreen" type="Control" unique_id=1482019842]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_ul522")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1505365659]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="Background" unique_id=958215116]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="SkipLabel" type="Label" parent="Background" unique_id=1317319668]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 600.0
+offset_right = 1100.0
+offset_bottom = 630.0
+text = "Press SPACE to skip"

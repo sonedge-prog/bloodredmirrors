@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://oatwofjqhc4r"]
+
+[ext_resource type="Script" uid="uid://b5ewne23lda86" path="res://scenes/warning_screen/warning_screen.gd" id="1_5aak2"]
+
+[node name="WarningScreen" type="Control" unique_id=1918993548]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5aak2")
+
+[node name="Background" type="ColorRect" parent="." unique_id=189731980]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="WarningText" type="RichTextLabel" parent="Background" unique_id=1628443246]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 1050.0
+offset_bottom = 520.0
+bbcode_enabled = true
+text = "[center][b]CONTENT WARNING[/b][/center]
+
+This game contains content that may be distressing or harmful to some players. Please read the following carefully before proceeding.
+
+[color=red]⚠ JUMPSCARES[/color]
+Sudden loud noises and frightening imagery.
+
+[color=orange]⚠ GORE & GRAPHIC VIOLENCE[/color]
+This game contains graphic depictions of violence and blood.
+
+[color=yellow]⚠ EPILEPSY WARNING[/color]
+This game contains flashing lights and rapidly changing images that may cause discomfort or seizures in people with photosensitive epilepsy.
+
+[color=pink]⚠ DARK THEMES[/color]
+This game explores themes including death, suicide, and psychological horror. If you are sensitive to these topics, please take care.
+
+By clicking Accept, you confirm that you are aware of these warnings and choose to proceed."
+fit_content = true
+
+[node name="CheckboxContainer" type="HBoxContainer" parent="Background" unique_id=2065058421]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 565.0
+offset_right = 750.0
+offset_bottom = 605.0
+
+[node name="DontShowCheck" type="CheckBox" parent="Background/CheckboxContainer" unique_id=348887397]
+layout_mode = 2
+disabled = true
+toggle_mode = false
+
+[node name="CheckLabel" type="CheckBox" parent="Background/CheckboxContainer" unique_id=793236714]
+layout_mode = 2
+text = "Don't show this again"
+
+[node name="AcceptButton" type="Button" parent="Background" unique_id=701133415]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 600.0
+offset_right = 776.0
+offset_bottom = 645.0
+text = "I Understand, Accept and Continue"
