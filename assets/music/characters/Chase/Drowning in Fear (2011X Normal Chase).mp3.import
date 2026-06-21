@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bn333hi5vpiu8"
+path="res://.godot/imported/Drowning in Fear (2011X Normal Chase).mp3-e09e2285251f487bc1aea701606698ec.mp3str"
+
+[deps]
+
+source_file="res://assets/music/characters/Chase/Drowning in Fear (2011X Normal Chase).mp3"
+dest_files=["res://.godot/imported/Drowning in Fear (2011X Normal Chase).mp3-e09e2285251f487bc1aea701606698ec.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

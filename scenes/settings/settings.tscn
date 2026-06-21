@@ -1,0 +1,266 @@
+[gd_scene format=3 uid="uid://eqwv07lkxcx8"]
+
+[ext_resource type="Script" uid="uid://clyvmo75x4bwt" path="res://scenes/settings/settings.gd" id="1_26ncd"]
+[ext_resource type="AudioStream" uid="uid://bnd83jthhtdtx" path="res://assets/audio/bullia.ogg" id="2_vu5fi"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_vu5fi"]
+
+[node name="Settings" type="Control" unique_id=859565661]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_26ncd")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1223467633]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="TitleLabel" type="Label" parent="Background" unique_id=185785606]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 180.0
+offset_bottom = 70.0
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="Background" unique_id=705201342]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 55.0
+offset_right = 154.0
+offset_bottom = 91.0
+text = "<- Back"
+
+[node name="TabBar" type="TabBar" parent="Background" unique_id=566960543]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 100.0
+offset_right = 1760.0
+offset_bottom = 150.0
+current_tab = 0
+tab_count = 4
+tab_0/title = "Identity"
+tab_1/title = "Visual"
+tab_2/title = "Audio"
+tab_3/title = "Accessibility"
+
+[node name="SettingsContainer" type="Panel" parent="Background" unique_id=260181465]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 160.0
+offset_right = 1760.0
+offset_bottom = 1040.0
+
+[node name="IdentityPanel" type="Panel" parent="Background/SettingsContainer" unique_id=814419303]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 880.0
+
+[node name="UsernameLabel" type="Label" parent="Background/SettingsContainer/IdentityPanel" unique_id=1548677117]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 440.0
+offset_bottom = 80.0
+text = "Display Name"
+
+[node name="UsernameField" type="LineEdit" parent="Background/SettingsContainer/IdentityPanel" unique_id=1914712490]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 90.0
+offset_right = 640.0
+offset_bottom = 140.0
+placeholder_text = "Enter a username..."
+
+[node name="PronounsLabel" type="Label" parent="Background/SettingsContainer/IdentityPanel" unique_id=137419124]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 180.0
+offset_right = 440.0
+offset_bottom = 220.0
+text = "Pronouns (optional)"
+
+[node name="PronounsContainer" type="HBoxContainer" parent="Background/SettingsContainer/IdentityPanel" unique_id=647290691]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 230.0
+offset_right = 940.0
+offset_bottom = 290.0
+
+[node name="TheyThemCheck" type="CheckBox" parent="Background/SettingsContainer/IdentityPanel/PronounsContainer" unique_id=1003042653]
+layout_mode = 2
+button_group = SubResource("ButtonGroup_vu5fi")
+text = "They/Them"
+
+[node name="SheHerCheck" type="CheckBox" parent="Background/SettingsContainer/IdentityPanel/PronounsContainer" unique_id=106094569]
+layout_mode = 2
+button_group = SubResource("ButtonGroup_vu5fi")
+text = "She/Her"
+
+[node name="HeHimCheck" type="CheckBox" parent="Background/SettingsContainer/IdentityPanel/PronounsContainer" unique_id=1312500267]
+layout_mode = 2
+button_group = SubResource("ButtonGroup_vu5fi")
+text = "He/Him"
+
+[node name="AnyCheck" type="CheckBox" parent="Background/SettingsContainer/IdentityPanel/PronounsContainer" unique_id=1088825568]
+layout_mode = 2
+button_group = SubResource("ButtonGroup_vu5fi")
+text = "Any"
+
+[node name="AudioPanel" type="Panel" parent="Background/SettingsContainer" unique_id=2020188620]
+visible = false
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 880.0
+
+[node name="HarshNoiseLabel" type="Label" parent="Background/SettingsContainer/AudioPanel" unique_id=1175102837]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 640.0
+offset_bottom = 80.0
+text = "Harsh Noise Volume"
+
+[node name="HarshNoiseSlider" type="HSlider" parent="Background/SettingsContainer/AudioPanel" unique_id=1711155148]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 90.0
+offset_right = 840.0
+offset_bottom = 130.0
+value = 100.0
+
+[node name="HarshNoiseTest" type="Button" parent="Background/SettingsContainer/AudioPanel" unique_id=748306369]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 85.0
+offset_right = 1180.0
+offset_bottom = 135.0
+text = "Test (Kolo Scream)"
+
+[node name="SubtitlesCheck" type="CheckBox" parent="Background/SettingsContainer/AudioPanel" unique_id=443355458]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 170.0
+offset_right = 440.0
+offset_bottom = 210.0
+text = "Enable Subtitles"
+
+[node name="LyricsCheck" type="CheckBox" parent="Background/SettingsContainer/AudioPanel" unique_id=1410501448]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 220.0
+offset_right = 440.0
+offset_bottom = 260.0
+text = "Show Lyrics"
+
+[node name="HarshNoisePlayer" type="AudioStreamPlayer2D" parent="Background/SettingsContainer/AudioPanel" unique_id=817770944]
+stream = ExtResource("2_vu5fi")
+
+[node name="AccessibilityPanel" type="Panel" parent="Background/SettingsContainer" unique_id=1486571554]
+visible = false
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 880.0
+
+[node name="NoGoreCheck" type="CheckBox" parent="Background/SettingsContainer/AccessibilityPanel" unique_id=170752012]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 440.0
+offset_bottom = 80.0
+text = "No Gore"
+
+[node name="TextScaleLabel" type="Label" parent="Background/SettingsContainer/AccessibilityPanel" unique_id=317067226]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 200.0
+offset_right = 440.0
+offset_bottom = 240.0
+text = "Text Scale"
+
+[node name="TextScaleSlider" type="HSlider" parent="Background/SettingsContainer/AccessibilityPanel" unique_id=381580167]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 245.0
+offset_right = 840.0
+offset_bottom = 285.0
+min_value = 0.5
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="EpilepsyCheck" type="CheckBox" parent="Background/SettingsContainer/AccessibilityPanel" unique_id=1164811961]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 90.0
+offset_right = 440.0
+offset_bottom = 130.0
+text = "Epilepsy Safety"
+
+[node name="StreamingWarning" type="Label" parent="Background/SettingsContainer/AccessibilityPanel" unique_id=1468300805]
+visible = false
+modulate = Color(0.8901961, 0.33333334, 0, 1)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 135.0
+offset_right = 1040.0
+offset_bottom = 175.0
+
+[node name="VisualPanel" type="Panel" parent="Background/SettingsContainer" unique_id=1500212671]
+visible = false
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 880.0
+
+[node name="ResolutionLabel" type="Label" parent="Background/SettingsContainer/VisualPanel" unique_id=1358153984]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 440.0
+offset_bottom = 80.0
+text = "Resolution"
+
+[node name="ResolutionOption" type="OptionButton" parent="Background/SettingsContainer/VisualPanel" unique_id=594376084]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 65.0
+offset_right = 440.0
+offset_bottom = 115.00011
+
+[node name="FullscreenLabel" type="Label" parent="Background/SettingsContainer/VisualPanel" unique_id=1524867251]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 180.0
+offset_right = 440.0
+offset_bottom = 220.0
+text = "Fullscreen"
+
+[node name="FullscreenCheck" type="CheckBox" parent="Background/SettingsContainer/VisualPanel" unique_id=2051437693]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 225.0
+offset_right = 440.0
+offset_bottom = 265.0
+text = "Enable Fullscreen"
+
+[node name="VSyncLabel" type="Label" parent="Background/SettingsContainer/VisualPanel" unique_id=1405799281]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 345.0
+offset_right = 440.0
+offset_bottom = 385.0
+text = "VSync"
+
+[node name="VSyncCheck" type="CheckBox" parent="Background/SettingsContainer/VisualPanel" unique_id=540611566]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 378.0
+offset_right = 440.0
+offset_bottom = 418.0
+text = "Enable VSync"

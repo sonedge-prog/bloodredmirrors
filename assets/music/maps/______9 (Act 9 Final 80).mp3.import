@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hqrxtcn1aktj"
+path="res://.godot/imported/______9 (Act 9 Final 80).mp3-f89e80e50f06f93e5da20028bea8c760.mp3str"
+
+[deps]
+
+source_file="res://assets/music/maps/______9 (Act 9 Final 80).mp3"
+dest_files=["res://.godot/imported/______9 (Act 9 Final 80).mp3-f89e80e50f06f93e5da20028bea8c760.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

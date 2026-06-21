@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjact1cyfri7v"
+path="res://.godot/imported/______9 (Act 9 Map Theme).mp3-55464333c462f71cc10af5f3b7fb60f8.mp3str"
+
+[deps]
+
+source_file="res://assets/music/maps/______9 (Act 9 Map Theme).mp3"
+dest_files=["res://.godot/imported/______9 (Act 9 Map Theme).mp3-55464333c462f71cc10af5f3b7fb60f8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

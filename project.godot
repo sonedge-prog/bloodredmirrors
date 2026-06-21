@@ -11,10 +11,27 @@ config_version=5
 [application]
 
 config/name="BloodRedMirrors"
+<<<<<<< Updated upstream
 run/main_scene="uid://cfsmfi16xmd3v"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+=======
+run/main_scene="uid://oatwofjqhc4r"
+config/features=PackedStringArray("4.6", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+SaveManager="*uid://beki3cnd6usl8"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+
+>>>>>>> Stashed changes
 [physics]
 
 3d/physics_engine="Jolt Physics"

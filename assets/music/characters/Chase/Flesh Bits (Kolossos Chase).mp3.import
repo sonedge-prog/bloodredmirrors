@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpwg6ti4gn50n"
+path="res://.godot/imported/Flesh Bits (Kolossos Chase).mp3-cc1c2007865994a61073933ec0168668.mp3str"
+
+[deps]
+
+source_file="res://assets/music/characters/Chase/Flesh Bits (Kolossos Chase).mp3"
+dest_files=["res://.godot/imported/Flesh Bits (Kolossos Chase).mp3-cc1c2007865994a61073933ec0168668.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

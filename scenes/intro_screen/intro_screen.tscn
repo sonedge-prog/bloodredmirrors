@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://f0x71thakc6b"]
+
+[ext_resource type="VideoStream" uid="uid://dfji8duc4hpsa" path="res://assets/videos/intro.ogv" id="1_w6mh6"]
+[ext_resource type="Script" uid="uid://rx4k73lr53ap" path="res://scenes/intro_screen/intro_screen.gd" id="1_ywgjt"]
+
+[node name="IntroScreen" type="Control" unique_id=1482019842]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ywgjt")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1505365659]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="Background" unique_id=958215116]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+stream = ExtResource("1_w6mh6")
+
+[node name="SkipLabel" type="Label" parent="Background" unique_id=1317319668]
+layout_mode = 0
+offset_left = 1620.0
+offset_top = 1020.0
+offset_right = 1900.0
+offset_bottom = 1060.0
+text = "Press SPACE to skip"

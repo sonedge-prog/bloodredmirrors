@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1e6we0rf1ljn"
+path="res://.godot/imported/ANNIHILATION (Kolossos Last Life & Low HP Chase).mp3-a4a902ac7685d0f8be27817c2729397b.mp3str"
+
+[deps]
+
+source_file="res://assets/music/characters/Chase/ANNIHILATION (Kolossos Last Life & Low HP Chase).mp3"
+dest_files=["res://.godot/imported/ANNIHILATION (Kolossos Last Life & Low HP Chase).mp3-a4a902ac7685d0f8be27817c2729397b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
