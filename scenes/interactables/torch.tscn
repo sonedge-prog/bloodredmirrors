@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bp1xtn80kn55x"]
+
+[ext_resource type="Script" uid="uid://gpu6y45yy72w" path="res://scenes/interactables/torch.gd" id="1_4fecd"]
+[ext_resource type="Texture2D" uid="uid://ckq202quan266" path="res://assets/interactables/minecraft_torches/torch.png" id="1_o6006"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fecd"]
+size = Vector2(2, 3)
+
+[node name="Torch" type="Area2D" unique_id=1069159143]
+script = ExtResource("1_4fecd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=656292948]
+scale = Vector2(0.021875, 0.021874998)
+texture = ExtResource("1_o6006")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1553929953]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_4fecd")

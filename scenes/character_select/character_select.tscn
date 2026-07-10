@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://bdloyseia80qj"]
+
+[ext_resource type="Script" uid="uid://bkqdpumbk83ap" path="res://scenes/character_select/character_select.gd" id="1_08r7m"]
+
+[sub_resource type="SystemFont" id="SystemFont_gqkdd"]
+font_names = PackedStringArray("Super Mario 256")
+multichannel_signed_distance_field = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7awtc"]
+bg_color = Color(0, 0, 0.38039216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqt0e"]
+bg_color = Color(0.22745098, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yd6k2"]
+bg_color = Color(0.38052696, 0.30725354, 9.62615e-08, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rwcku"]
+bg_color = Color(0.38555613, 0, 0.096347354, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_08r7m"]
+font_names = PackedStringArray("Super Mario 256")
+multichannel_signed_distance_field = true
+
+[sub_resource type="SystemFont" id="SystemFont_4ervu"]
+font_names = PackedStringArray("Super Mario 256")
+multichannel_signed_distance_field = true
+
+[node name="CharacterSelect" type="Control" unique_id=659408684]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_08r7m")
+
+[node name="Background" type="ColorRect" parent="." unique_id=79837092]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 1, 1)
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=1255012946]
+repeat_size = Vector2(1920, 0)
+
+[node name="BGTexture" type="TextureRect" parent="Background/Parallax2D" unique_id=398440462]
+offset_right = 1920.0
+offset_bottom = 1080.0
+stretch_mode = 1
+
+[node name="TeamSelectPanel" type="Panel" parent="Background" unique_id=970595810]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="TitleLabel" type="Label" parent="Background/TeamSelectPanel" unique_id=1391836211]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 200.0
+offset_right = 1160.0
+offset_bottom = 260.0
+theme_override_fonts/font = SubResource("SystemFont_gqkdd")
+theme_override_font_sizes/font_size = 45
+text = "SELECT A TEAM"
+horizontal_alignment = 1
+
+[node name="TeamContainer" type="HBoxContainer" parent="Background/TeamSelectPanel" unique_id=549321693]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 400.0
+offset_right = 1560.0
+offset_bottom = 600.0
+
+[node name="BlueTeamBtn" type="Button" parent="Background/TeamSelectPanel/TeamContainer" unique_id=25750908]
+custom_minimum_size = Vector2(260, 180)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_7awtc")
+text = "Blue Team"
+
+[node name="RedTeamBtn" type="Button" parent="Background/TeamSelectPanel/TeamContainer" unique_id=2081223301]
+custom_minimum_size = Vector2(260, 180)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqt0e")
+text = "Red Team"
+
+[node name="YellowTeamBtn" type="Button" parent="Background/TeamSelectPanel/TeamContainer" unique_id=1834400583]
+custom_minimum_size = Vector2(260, 180)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_yd6k2")
+text = "Yellow Team"
+
+[node name="PinkTeamBtn" type="Button" parent="Background/TeamSelectPanel/TeamContainer" unique_id=831187250]
+custom_minimum_size = Vector2(260, 180)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_rwcku")
+text = "Pink Team"
+
+[node name="BackToMenuButton" type="Button" parent="Background/TeamSelectPanel" unique_id=1636975457]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 180.0
+offset_bottom = 70.0
+text = "<- BACK"
+
+[node name="CharacterArt" type="TextureRect" parent="Background" unique_id=622667741]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 50.0
+offset_right = 1900.0
+offset_bottom = 950.0
+
+[node name="TopBar" type="ColorRect" parent="Background" unique_id=1021729884]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 130.0
+color = Color(0, 0, 0.13725491, 1)
+
+[node name="BottomBar" type="ColorRect" parent="Background" unique_id=1695423360]
+layout_mode = 0
+offset_top = 780.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0.13725491, 1)
+
+[node name="CharacterName" type="Label" parent="Background" unique_id=1791239239]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 640.0
+offset_bottom = 120.0
+theme_override_fonts/font = SubResource("SystemFont_08r7m")
+theme_override_font_sizes/font_size = 69
+text = "SONIC"
+
+[node name="DescriptionLabel" type="Label" parent="Background" unique_id=2132412747]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 820.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+theme_override_fonts/font = SubResource("SystemFont_4ervu")
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 2
+
+[node name="LeftArrow" type="Button" parent="Background" unique_id=1504454968]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 440.0
+offset_right = 100.0
+offset_bottom = 560.0
+text = "❮"
+
+[node name="RightArrow" type="Button" parent="Background" unique_id=1619678799]
+layout_mode = 0
+offset_left = 1820.0
+offset_top = 440.0
+offset_right = 1900.0
+offset_bottom = 560.0
+text = "❯"
+
+[node name="CharacterBackButton" type="Button" parent="Background" unique_id=1630751397]
+layout_mode = 0
+offset_left = 1700.0
+offset_top = 40.0
+offset_right = 1860.0
+offset_bottom = 90.0
+text = "<- BACK"

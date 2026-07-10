@@ -114,3 +114,51 @@ offset_top = 20.0
 offset_right = 180.0
 offset_bottom = 70.0
 text = "<- Back"
+
+[node name="TestWarningPopup" type="Panel" parent="." unique_id=2140889011]
+visible = false
+layout_mode = 0
+offset_left = 460.0
+offset_top = 30.0
+offset_right = 1460.0
+offset_bottom = 630.0
+
+[node name="TitleLabel" type="Label" parent="TestWarningPopup" unique_id=1913915641]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 30.0
+offset_right = 700.0
+offset_bottom = 80.0
+text = "⚠ DEVELOPMENT BUILD"
+horizontal_alignment = 1
+
+[node name="WarningText" type="RichTextLabel" parent="TestWarningPopup" unique_id=1195789533]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 100.0
+offset_right = 960.0
+offset_bottom = 460.0
+bbcode_enabled = true
+text = "[center]This is an internal test build not intended for public release.
+
+What you are about to experience is a [b]test zone[/b] designed for development purposes only. It is [b]one player only[/b] as multiplayer has not been implemented yet.
+
+Everything presented here: characters, maps, mechanics, and visuals... [b]Is subject to change[/b] in future versions.
+
+By continuing you acknowledge that this is an unfinished product.[/center]"
+
+[node name="AgreeButton" type="Button" parent="TestWarningPopup" unique_id=1318413844]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 490.0
+offset_right = 450.0
+offset_bottom = 550.0
+text = "✔ I Understand"
+
+[node name="CancelButton" type="Button" parent="TestWarningPopup" unique_id=397855281]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 490.0
+offset_right = 800.0
+offset_bottom = 550.0
+text = "✖ Go Back"

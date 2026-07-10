@@ -84,4 +84,8 @@ func _on_username_confirm():
 # ── Finish ─────────────────────────────────────────────────────────────────────
 func _finish():
 	SaveManager.set_value("identity", "consent_done", true)
-	get_tree().change_scene_to_file(NEXT_SCENE)
+	var first_setup = SaveManager.get_value("settings", "first_setup_done", false)
+	if not first_setup:
+		get_tree().change_scene_to_file("res://scenes/settings/settings.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/intro_screen/intro_screen.tscn")

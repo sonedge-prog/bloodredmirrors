@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cnakukx1yx5rc"]
+
+[ext_resource type="Script" uid="uid://yggkcmr5scan" path="res://scenes/testing_purposes/effect_zone.gd" id="1_gdepa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gonm2"]
+size = Vector2(154, 174)
+
+[node name="EffectZone" type="Area2D" unique_id=1899724181]
+script = ExtResource("1_gdepa")
+metadata/is_healing = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1942011994]
+position = Vector2(67, 77)
+shape = SubResource("RectangleShape2D_gonm2")

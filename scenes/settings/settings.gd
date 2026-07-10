@@ -2,7 +2,7 @@ extends Control
 
 # -- Onready ---------------------------------------------------------------------------------------------
 @onready var back_btn = $Background/BackButton
-@onready var tab_bar = $Background/TabBar
+@onready var tab_bar  = $Background/TabBar
 
 @onready var identity_panel = $Background/SettingsContainer/IdentityPanel
 @onready var visual_panel   = $Background/SettingsContainer/VisualPanel
@@ -17,22 +17,23 @@ extends Control
 @onready var any_check      = $Background/SettingsContainer/IdentityPanel/PronounsContainer/AnyCheck
 
 # Visual
-@onready var resolution_option  = $Background/SettingsContainer/VisualPanel/ResolutionOption
-@onready var fullscreen_check   = $Background/SettingsContainer/VisualPanel/FullscreenCheck
-@onready var vsync_check        = $Background/SettingsContainer/VisualPanel/VSyncCheck
+@onready var resolution_option = $Background/SettingsContainer/VisualPanel/ResolutionOption
+@onready var fullscreen_check  = $Background/SettingsContainer/VisualPanel/FullscreenCheck
+@onready var vsync_check       = $Background/SettingsContainer/VisualPanel/VSyncCheck
 
 # Audio
+@onready var music_slider       = $Background/SettingsContainer/AudioPanel/MusicSlider
 @onready var harsh_slider       = $Background/SettingsContainer/AudioPanel/HarshNoiseSlider
 @onready var harsh_test_btn     = $Background/SettingsContainer/AudioPanel/HarshNoiseTest
+@onready var harsh_noise_player = $Background/SettingsContainer/AudioPanel/HarshNoisePlayer
 @onready var subtitles_check    = $Background/SettingsContainer/AudioPanel/SubtitlesCheck
 @onready var lyrics_check       = $Background/SettingsContainer/AudioPanel/LyricsCheck
-@onready var harsh_noise_player = $Background/SettingsContainer/AudioPanel/HarshNoisePlayer
 
 # Accessibility
-@onready var no_gore_check      = $Background/SettingsContainer/AccessibilityPanel/NoGoreCheck
-@onready var epilepsy_check     = $Background/SettingsContainer/AccessibilityPanel/EpilepsyCheck
-@onready var streaming_warning  = $Background/SettingsContainer/AccessibilityPanel/StreamingWarning
-@onready var text_scale_slider  = $Background/SettingsContainer/AccessibilityPanel/TextScaleSlider
+@onready var no_gore_check     = $Background/SettingsContainer/AccessibilityPanel/NoGoreCheck
+@onready var epilepsy_check    = $Background/SettingsContainer/AccessibilityPanel/EpilepsyCheck
+@onready var streaming_warning = $Background/SettingsContainer/AccessibilityPanel/StreamingWarning
+@onready var text_scale_slider = $Background/SettingsContainer/AccessibilityPanel/TextScaleSlider
 
 # -- Resolutions -----------------------------------------------------------------------------------------
 const RESOLUTIONS = [
@@ -70,6 +71,7 @@ func _ready():
 	vsync_check.toggled.connect(func(v): _on_vsync_changed(v))
 
 	# Audio
+	music_slider.value_changed.connect(func(v): _on_music_volume_changed(v))
 	harsh_slider.value_changed.connect(func(v): _save("audio", "harsh_noise", v))
 	harsh_test_btn.pressed.connect(_test_harsh_noise)
 	subtitles_check.toggled.connect(func(v): _save("audio", "subtitles", v))
@@ -147,6 +149,10 @@ func _on_username_changed(value: String):
 		return
 	SaveManager.set_value("identity", "display_name", value)
 
+func _on_music_volume_changed(value: float):
+	MusicManager.set_volume(value / 100.0)
+	_save("audio", "music_volume", value)
+
 func _test_harsh_noise():
 	harsh_noise_player.volume_db = linear_to_db(harsh_slider.value / 100.0)
 	harsh_noise_player.play()
@@ -176,7 +182,7 @@ func _save(section: String, key: String, value):
 func _load_settings():
 	# Identity
 	username_field.text = SaveManager.get_value("identity", "display_name", "Player")
-	var saved_pronouns = SaveManager.get_value("identity", "pronouns", "")
+	var saved_pronouns  = SaveManager.get_value("identity", "pronouns", "")
 	match saved_pronouns:
 		"they/them": they_check.button_pressed = true
 		"she/her":   she_check.button_pressed  = true
@@ -200,6 +206,10 @@ func _load_settings():
 	_on_vsync_changed(saved_vsync)
 
 	# Audio
+	var music_vol = SaveManager.get_value("audio", "music_volume", 100.0)
+	music_slider.value = music_vol
+	MusicManager.set_volume(music_vol / 100.0)
+
 	harsh_slider.value             = SaveManager.get_value("audio", "harsh_noise", 100.0)
 	subtitles_check.button_pressed = SaveManager.get_value("audio", "subtitles", false)
 	lyrics_check.button_pressed    = SaveManager.get_value("audio", "lyrics", false)

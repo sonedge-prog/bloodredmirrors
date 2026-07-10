@@ -11,6 +11,9 @@ extends Control
 @onready var information_panel = $InformationPanel
 @onready var tutorials_back    = $TutorialsPanel/BackButton
 @onready var information_back  = $InformationPanel/BackButton
+@onready var test_warning_popup = $TestWarningPopup
+@onready var agree_btn          = $TestWarningPopup/AgreeButton
+@onready var cancel_btn         = $TestWarningPopup/CancelButton
 
 func _ready():
 	print("button_list: ", button_list)
@@ -27,6 +30,8 @@ func _ready():
 	information_panel.visible = false
 
 	play_btn.pressed.connect(_on_play)
+	agree_btn.pressed.connect(_on_agree)
+	cancel_btn.pressed.connect(_on_cancel)
 	server_list_btn.pressed.connect(_on_server_list)
 	tutorials_btn.pressed.connect(_on_tutorials)
 	information_btn.pressed.connect(_on_information)
@@ -34,9 +39,23 @@ func _ready():
 	exit_btn.pressed.connect(_on_exit)
 	tutorials_back.pressed.connect(_on_back)
 	information_back.pressed.connect(_on_back)
+	MusicManager.play("menu")
 
 func _on_play():
-	get_tree().change_scene_to_file("res://scenes/server_list/server_list.tscn")
+	# Show warning popup instead of going straight to character select
+	test_warning_popup.visible = true
+	button_list.visible        = false
+
+func _on_agree():
+	# Player agreed — lock to survivors only and go to character select
+	SaveManager.set_value("match", "role", "survivors")
+	test_warning_popup.visible = false
+	get_tree().change_scene_to_file("res://scenes/character_select/character_select.tscn")
+
+func _on_cancel():
+	# Player backed out — close popup and show menu again
+	test_warning_popup.visible = false
+	button_list.visible        = true
 
 func _on_server_list():
 	get_tree().change_scene_to_file("res://scenes/server_list/server_list.tscn")
